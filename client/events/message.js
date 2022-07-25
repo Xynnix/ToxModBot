@@ -24,7 +24,7 @@ module.exports = async (client, message) => {
 
     await SERVERS.findOne({ guildID: message.guild.id }, async (err, res) => {
 
-            let prefix = 'tox.'
+            let prefix = '.'
 
             if (!res) {
                 const NewServer = await new SERVERS({
@@ -32,7 +32,7 @@ module.exports = async (client, message) => {
                     maxwarns: '3',
                     guildID: message.guild.id,
                     mutedrole: 'String',
-                    prefix: 'tox.',
+                    prefix: '.',
                     welcome: 'greetings',
                     leave: 'greetings',
                     audit: 'String',
